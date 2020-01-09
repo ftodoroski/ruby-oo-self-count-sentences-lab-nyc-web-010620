@@ -15,8 +15,7 @@ class String
 
   def count_sentences
     return 0 if self == ""
-    delimiters = [".", "!", "?"]
-    self.split(Regexp.union(delimiters)).length
-    # self.split(" ").count { |ele| ele.sentence? || ele.question? || ele.exclamation? }
+
+    self.split(" ").count { |ele| ele.sentence? || ele.question? || ele.exclamation? }
   end
 end
